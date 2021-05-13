@@ -28,7 +28,7 @@ test:
 
 about:
   home: http://freedesktop.org/wiki/Software/pyxdg
-  license: GNU Lesser General Public v2 (LGPLv2)
+  license: LGPL-2.0-only
   license_family: LGPL
   license_file: COPYING
   summary: PyXDG contains implementations of freedesktop.org standards in python.
