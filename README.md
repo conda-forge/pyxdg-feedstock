@@ -3,7 +3,7 @@ About pyxdg
 
 Home: http://freedesktop.org/wiki/Software/pyxdg
 
-Package license: GNU Lesser General Public v2 (LGPLv2)
+Package license: LGPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxdg-feedstock/blob/master/LICENSE.txt)
 
@@ -117,5 +117,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@h-vetinari](https://github.com/h-vetinari/)
 * [@marcelotrevisani](https://github.com/marcelotrevisani/)
 
