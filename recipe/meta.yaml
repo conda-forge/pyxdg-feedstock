@@ -1,26 +1,26 @@
 {% set name = "pyxdg" %}
-{% set version = "0.26" %}
+{% set version = "0.27" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fe2928d3f532ed32b39c32a482b54136fe766d19936afc96c8f00645f9da1a06
+  sha256: 80bd93aae5ed82435f20462ea0208fb198d8eec262e831ee06ce9ddb6b91c5a5
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   build:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
 
 test:
   imports:
@@ -28,12 +28,13 @@ test:
 
 about:
   home: http://freedesktop.org/wiki/Software/pyxdg
-  license: GNU Lesser General Public v2 (LGPLv2)
+  license: LGPL-2.0-only
   license_family: LGPL
-  license_file: 'COPYING'
+  license_file: COPYING
   summary: PyXDG contains implementations of freedesktop.org standards in python.
-  description: "PyXDG is a python library to access freedesktop.org standards"
+  description: PyXDG is a python library to access freedesktop.org standards
 
 extra:
   recipe-maintainers:
     - marcelotrevisani
+    - h-vetinari
